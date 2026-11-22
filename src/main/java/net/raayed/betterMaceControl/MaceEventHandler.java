@@ -544,7 +544,7 @@ public class MaceEventHandler implements Listener {
         if (maceID == null) return;
 
         if (!hasPermission(player, plugin.getConfig().getString("bypass-permission", "macecontrol.bypass"))) {
-            if (tracker.getCurrentMaceHolders().get(player.getUniqueId()) > manager.getMaxIndividualMaceCount()) {
+            if (tracker.getCurrentMaceHolders().get(player.getUniqueId()) >= manager.getMaxIndividualMaceCount()) {
                 event.setCancelled(true);
                 player.sendMessage("§cYou already have " + manager.getMaxIndividualMaceCount() + " Maces and may not have more than that at any time.");
                 return;
