@@ -1,7 +1,7 @@
 name: MaceControl
 version: '0.9.2'
 main: net.raayed.betterMaceControl.MaceControl
-author: Zeppy
+author: Raayed
 api-version: '1.21'
 description: Advanced mace management and tracking system for Minecraft servers
 website: https://github.com/The-Cool-Python-Guy/BetterMaceControl
