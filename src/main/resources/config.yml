@@ -1,19 +1,9 @@
-##########################################################
-#
-#  _____
-# |__  /___ _ __  _ __  _   _
-#   / // _ \ '_ \| '_ \| | | |
-#  / /|  __/ |_) | |_) | |_| |
-# /____\___| .__/| .__/ \__, |
-#          |_|   |_|    |___/
-#
-#    MaceControl Plugin by Zeppy
-#    Config file — please do not delete or modify badly
-#    GitHub - https://github.com/MrZeppy/MaceControl.git
-##########################################################
+# BetterMaceControl configuration
 
 # Maximum number of Maces allowed on server
+
 max-mace-count: 5
+max-individual-mace-count : 2 # per player mace restriction
 
 # Permissions
 bypass-permission: "macecontrol.bypass"

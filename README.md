@@ -34,7 +34,9 @@ MaceControl is a lightweight Minecraft plugin that limits the number of maces al
 
 ```yaml
 # Maximum number of Maces allowed on server
+
 max-mace-count: 5
+max-individual-mace-count : 2 # per player mace restriction
 
 # Permissions
 bypass-permission: "macecontrol.bypass"

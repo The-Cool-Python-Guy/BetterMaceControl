@@ -153,6 +153,10 @@ public class MaceEventHandler implements Listener {
                     event.setCancelled(true);
                     player.sendMessage("§cThere are already " + manager.getMaxMaceCount() + " Maces in the world!");
                     return;
+                } else if (tracker.getCurrentMaceHolders().get(player.getUniqueId()) > manager.getMaxIndividualMaceCount()) {
+                    event.setCancelled(true);
+                    player.sendMessage("§cYou already have " + manager.getMaxIndividualMaceCount() + " Maces and may not have more than that at any time.");
+                    return;
                 }
             }
 
@@ -538,6 +542,14 @@ public class MaceEventHandler implements Listener {
 
         String maceID = getMaceID(stack);
         if (maceID == null) return;
+
+        if (!hasPermission(player, plugin.getConfig().getString("bypass-permission", "macecontrol.bypass"))) {
+            if (tracker.getCurrentMaceHolders().get(player.getUniqueId()) > manager.getMaxIndividualMaceCount()) {
+                event.setCancelled(true);
+                player.sendMessage("§cYou already have " + manager.getMaxIndividualMaceCount() + " Maces and may not have more than that at any time.");
+                return;
+            }
+        }
 
         // Handle pickup using tracker
         tracker.handleMacePickup(entityItem.getUniqueId(), player.getUniqueId(), maceID);

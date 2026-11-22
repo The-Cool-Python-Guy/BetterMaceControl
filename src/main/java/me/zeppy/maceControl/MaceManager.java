@@ -17,10 +17,15 @@ public class MaceManager {
 
     private final MaceControl plugin;
     private int MAX_MACE_COUNT;
+    private int MAX_INDIVIDUAL_MACE_COUNT;
 
     public int getMaxMaceCount() {
         return MAX_MACE_COUNT;
     }
+    public int getMaxIndividualMaceCount() {
+        return MAX_INDIVIDUAL_MACE_COUNT;
+    }
+
 
     public MaceControl getPlugin() {
         return plugin;
@@ -29,12 +34,19 @@ public class MaceManager {
     public MaceManager(MaceControl plugin) {
         this.plugin = plugin;
         this.MAX_MACE_COUNT = plugin.getConfig().getInt("max-mace-count", 5);
+        this.MAX_INDIVIDUAL_MACE_COUNT = plugin.getConfig().getInt("max-individual-mace-count", 2);
     }
 
     public void reloadConfig() {
         plugin.reloadConfig();
         this.MAX_MACE_COUNT = plugin.getConfig().getInt("max-mace-count", 5);
-        plugin.getLogger().info("Configuration reloaded. Max mace count: " + MAX_MACE_COUNT);
+        this.MAX_INDIVIDUAL_MACE_COUNT = plugin.getConfig().getInt("max-individual-mace-count", 2);
+        plugin.getLogger().info(
+            "Configuration reloaded. Max mace count: "
+             + MAX_MACE_COUNT
+             + ", max individual mace count: "
+             + MAX_INDIVIDUAL_MACE_COUNT
+        );
     }
 
     void loadMaceData() {
