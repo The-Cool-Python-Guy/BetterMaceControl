@@ -1,4 +1,4 @@
-package me.zeppy.maceControl;
+package net.raayed.betterMaceControl;
 
 import org.bukkit.Chunk;
 import org.bukkit.World;

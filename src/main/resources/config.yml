@@ -1,9 +1,8 @@
 # BetterMaceControl configuration
 
-# Maximum number of Maces allowed on server
-
-max-mace-count: 5
-max-individual-mace-count : 2 # per player mace restriction
+# Maximum number of Maces allowed
+max-mace-count: 5 # total server-wide limit
+max-individual-mace-count : 2 # per player mace limit
 
 # Permissions
 bypass-permission: "macecontrol.bypass"

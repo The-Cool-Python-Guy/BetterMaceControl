@@ -1,10 +1,13 @@
-# MaceControl – Limit Maces & Prevent Storage | Minecraft Plugin (1.21+)
+# BetterMaceControl – Limit Maces & Prevent Storage | Minecraft Plugin (1.21+)
 
-MaceControl is a lightweight Minecraft plugin that limits the number of maces allowed on your server and prevents players from storing maces in containers like chests, bundles, and item frames. It also prevents mobs from picking up maces and tracks all maces across online/offline players and dropped items.
+BetterMaceControl is a lightweight Minecraft plugin that limits the number of maces allowed on your server,
+limits the amount of maces per player,
+and prevents players from storing maces in containers like chests, bundles, and item frames. It also prevents mobs from picking up maces and tracks all maces across online/offline players and dropped items.
 
 ## Features
 
-- Mace Limits: Configurable mace count limits (default: 5 total server-wide)
+- Server-wide Mace Limits: Configurable mace count limits (default: 5 total server-wide)
+- Individual Mace Limits: Configurable mace count limits per player (default: 2 per player)
 - Storage Prevention: Prevents placing maces into chests, bundles, and item frames
 - Placement Blocking: Blocks mace storage via armor stands or item display entities
 - Player Tracking: Monitors maces across online/offline players and dropped items
@@ -33,10 +36,9 @@ MaceControl is a lightweight Minecraft plugin that limits the number of maces al
 ## ⚙️ Configuration
 
 ```yaml
-# Maximum number of Maces allowed on server
-
-max-mace-count: 5
-max-individual-mace-count : 2 # per player mace restriction
+# Maximum number of Maces allowed
+max-mace-count: 5 # total server-wide limit
+max-individual-mace-count : 2 # per player mace limit
 
 # Permissions
 bypass-permission: "macecontrol.bypass"
